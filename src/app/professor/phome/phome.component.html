@@ -1,0 +1,15 @@
+<div class="container" id="mt2" *ngIf="profData">
+    <div class="heading">
+        <button type="button" routerLink="/phome/giveAttendance" class="btn btn-primary gap"  >Give Attendance</button>
+        <button type="button" [routerLink]='["/phome/studAttend"]' class="btn btn-success gap">Show Student Attendance</button>
+       
+
+        <div id="sp"></div>
+        <button type="button" routerLink="/plog" class="btn btn-secondary gap" >Logout</button>
+    </div>
+
+ 
+</div>
+
+
+<router-outlet ></router-outlet>

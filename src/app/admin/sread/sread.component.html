@@ -1,0 +1,62 @@
+
+    <div class="container mt-3">
+
+        <!-- success message -->
+        <div *ngIf="successMsg" class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{ successMsg }}</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+            (click)="clear()"
+          ></button>
+        </div>
+      
+        <!-- Closed success -->
+      
+          <table class="table table-bordered">
+      
+              <thead>
+                <tr>
+                  <th scope="col">USN</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">DOB</th>
+                  <th scope="col">Sem</th>
+                  <th scope="col">OOMD</th>
+                  <th scope="col">CN</th>
+                  <th scope="col">DIP</th>
+                  <th scope="col">DM</th>
+                  <th scope="col">ADS</th>
+                  <th scope="col">Department</th>
+
+                  <th scope="col">Delete</th>
+                  <th scope="col">Update</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+      
+                <tr *ngFor="let usr of readStudent">
+                  <td>{{usr.usn}}</td>
+                  <td>{{usr.name}}</td>
+                  <td>{{usr.DOB}}</td>
+                  <td>{{usr.sem}}</td>
+                  <td>{{usr.oomdAtt}}</td>
+                  <td>{{usr.cnAtt}}</td>
+                  <td>{{usr.dipAtt}}</td>
+                  <td>{{usr.dmAtt}}</td>
+                  <td>{{usr.adsAtt}}</td>
+                  <td>{{usr.dept}}</td>
+                 
+
+
+                  <td><button class="btn btn-danger" (click)="deleteData(usr.usn)">Delete</button></td>
+                  <td><a [routerLink]="['/ahome/ustud',usr.usn]" class="btn btn-success">Update</a></td>
+                </tr>
+              </tbody>
+            </table>
+      
+      </div>
+      
+
+

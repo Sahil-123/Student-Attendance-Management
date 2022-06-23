@@ -1,0 +1,16 @@
+<div class="container" id="mt">
+    <button type="button" routerLink="/ahome/readS" class="btn btn-primary gap" *ngIf="name" >Students</button>
+    <button type="button" routerLink="/ahome/createS" class="btn btn-success gap" *ngIf="name">Add Students</button>
+    <button type="button" routerLink="/ahome/readP" class="btn btn-primary gap " *ngIf="name">Professors</button>
+    <button type="button" routerLink="/ahome/createP" class="btn btn-success gap" *ngIf="name">Add Professors</button>
+
+    <div id="sp"></div>
+    <div type="button" class="br gap" *ngIf="name">{{name}}.</div>
+    <button type="button" routerLink="/alog" class="btn btn-secondary gap" *ngIf="name">Logout</button>
+
+    <h1 *ngIf="!data"> Please Login...</h1>
+ 
+</div>
+
+
+<router-outlet *ngIf="name"></router-outlet>

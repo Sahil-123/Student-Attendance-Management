@@ -1,0 +1,35 @@
+.outer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    
+    }
+    
+    .container{
+        width: 40%;
+        border: 1px solid green;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    
+    .m{
+        margin-top: 100px;
+    }
+    
+    h1{
+        text-align: center;
+    }
+    
+    .bt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    button{
+        width: 150px;
+        
+    }

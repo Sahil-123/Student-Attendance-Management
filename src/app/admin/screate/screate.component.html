@@ -1,0 +1,183 @@
+<div class="container mt-3 ">
+    <div class="row">
+      <!-- Error message -->
+      <div
+        *ngIf="errMsf"
+        class="alert alert-danger alert-dismissible fade show"
+        role="alert"
+      >
+        <strong>{{ errMsf }}</strong>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+          (click)="clear()"
+        ></button>
+      </div>
+  
+      <!-- Closed Error -->
+  
+      <!-- success message -->
+      <div
+        *ngIf="successMsg"
+        class="alert alert-success alert-dismissible fade show"
+        role="alert"
+      >
+        <strong>{{ successMsg }}</strong>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+          (click)="clear()"
+        ></button>
+      </div>
+  
+      <!-- Closed success -->
+  
+      <form [formGroup]="userForm" class="cnt">
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="usn"
+            placeholder="USN"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="name"
+            placeholder="Name"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="date"
+            class="form-control"
+            formControlName="DOB"
+            placeholder="DOB"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="sem"
+            placeholder="sem"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="oomdAtt"
+            placeholder="oomd Attendance"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="oomdTAd"
+            placeholder="Total OOMD classes"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="cnAtt"
+            placeholder="CN Attendance"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="cnTAt"
+            placeholder="CN Total classes"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="dipAtt"
+            placeholder="DIP Attendance"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="dipTAt"
+            placeholder="DIP Total classes"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="dmAtt"
+            placeholder="DM Attendance"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="dmTAt"
+            placeholder="DM Total classes"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="adsAtt"
+            placeholder="ADS Attendance"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="adsTAt"
+            placeholder="ADS Total classes"
+          />
+        </div>
+  
+        <div class="col-md-4 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="dept"
+            placeholder="Department"
+          />
+        </div>
+  
+  
+        <div class="col-md-4 m-4 cnt">
+          <button class="btn btn-primary" (click)="Submit()">Add Student</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

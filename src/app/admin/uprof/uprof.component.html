@@ -1,0 +1,59 @@
+<div class="container mt-3 ">
+  <div class="row">
+    <!-- Error message -->
+    <div *ngIf="errMsf" class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>{{ errMsf }}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="clear()"></button>
+    </div>
+
+    <!-- Closed Error -->
+
+    <!-- success message -->
+    <div *ngIf="successMsg" class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>{{ successMsg }}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="clear()"></button>
+    </div>
+
+    <!-- Closed success -->
+
+    <form [formGroup]="userForm" class="cnt">
+
+      <div class="col-md-4 mt-2">
+        <input type="text" class="form-control" formControlName="Pid" readonly />
+      </div>
+
+      <div class="col-md-4 mt-2">
+        <input type="text" class="form-control" formControlName="name" placeholder="Name" />
+      </div>
+
+      <div class="col-md-4 mt-2">
+        <input type="text" class="form-control" formControlName="password" placeholder="password" />
+      </div>
+
+      <div class="col-md-4 mt-2">
+        <input type="date" class="form-control" formControlName="DOB" placeholder="DOB" />
+      </div>
+
+      <div class="col-md-4 mt-2">
+        <input type="text" class="form-control" formControlName="Dept" placeholder="Department" />
+      </div>
+
+      <div class="col-md-4 mt-2">
+        <input type="text" class="form-control" formControlName="Course" placeholder="Course" />
+      </div>
+
+      <div class="col-md-4 mt-2">
+        <input type="text" class="form-control" formControlName="sem" placeholder="Sem" />
+      </div>
+
+      <div class="col-md-4 mt-2">
+        <input type="text" class="form-control" formControlName="TClass" placeholder="Total classes" />
+      </div>
+
+
+      <div class="col-md-4 m-4 cnt">
+        <button class="btn btn-primary" (click)="Submit()">Update Professor</button>
+      </div>
+    </form>
+  </div>
+</div>

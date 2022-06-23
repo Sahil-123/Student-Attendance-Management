@@ -1,0 +1,54 @@
+
+    <div class="container mt-3">
+
+        <!-- success message -->
+        <div *ngIf="successMsg" class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{ successMsg }}</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+            (click)="clear()"
+          ></button>
+        </div>
+      
+        <!-- Closed success -->
+      
+          <table class="table table-bordered">
+      
+              <thead>
+                <tr>
+                  <th scope="col">PID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">DOB</th>
+                  <th scope="col">Department</th>
+                  <th scope="col">Course</th>
+                  <th scope="col">Sem</th>
+                  <th scope="col">Total Classes</th>
+
+                  <th scope="col">Delete</th>
+                  <th scope="col">Update</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+      
+                <tr *ngFor="let usr of readStudent">
+                  <td>{{usr.Pid}}</td>
+                  <td>{{usr.name}}</td>
+                  <td>{{usr.DOB}}</td>
+                  <td>{{usr.Dept}}</td>
+                  <td>{{usr.Course}}</td>
+                  <td>{{usr.sem}}</td>
+                  <td>{{usr.TClass}}</td>
+                
+                  <td><button class="btn btn-danger" (click)="deleteData(usr.Pid)">Delete</button></td>
+                  <td><a [routerLink]="['/ahome/uprof',usr.Pid]" class="btn btn-success">Update</a></td>
+                </tr>
+              </tbody>
+            </table>
+      
+      </div>
+      
+
+

@@ -1,0 +1,23 @@
+
+#mt{
+    margin-top: 5%;
+    display: flex;
+}
+
+.gap{
+    margin: 10px;
+}
+
+.rt{
+ 
+}
+
+.br{
+    border: 1px solid green;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+#sp{
+    width: 45%;
+}

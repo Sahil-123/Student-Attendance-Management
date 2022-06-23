@@ -1,0 +1,33 @@
+.mtp{
+    margin-top: 60px;
+}
+
+.contains{
+    border: 2px solid green;
+    border-radius: 10px;
+    box-shadow: 5px 10px 8px 5px #888888;
+    padding: 20px;
+}
+
+.chrt{
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   /* overflow-x: scroll; */
+
+  
+
+}
+
+.chbd{
+    width: 60%;
+    height: 30%;
+    margin: 20px;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 10px 8px 5px #888888;
+}

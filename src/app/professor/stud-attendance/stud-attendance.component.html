@@ -1,0 +1,51 @@
+
+    <div class="container mt-3" *ngIf="profData">
+
+        <!-- success message -->
+        <div *ngIf="successMsg" class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{ successMsg }}</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+            (click)="clear()"
+          ></button>
+        </div>
+      
+        <!-- Closed success -->
+        <p>PID: {{Pid}}</p>
+        <p>Course: {{Course }}</p>
+
+
+          <table class="table table-bordered">
+      
+              <thead>
+                <tr>
+                  <th scope="col">USN</th>
+                  <th scope="col">Name</th>
+
+                  <th scope="col">Attended Classes</th>
+                  <th scope="col">Out Of Classes</th>
+
+                  <th scope="col">Present</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+      
+                <tr *ngFor="let usr of readStudent">
+                  <td>{{usr.usn}}</td>
+                  <td>{{usr.name}}</td>
+
+                  <td>{{Attended()}}</td>
+                  <td>{{outOf()}}</td>
+                
+                  <td><button class="btn btn-danger">{{average(usr)}}</button></td>
+                </tr>
+              </tbody>
+            </table>
+      
+      </div>
+      
+
+

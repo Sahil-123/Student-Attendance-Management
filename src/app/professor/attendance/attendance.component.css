@@ -1,0 +1,35 @@
+.mr{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datepicker{
+    margin-bottom: 10px;
+    display: flex;
+    /* width: 30%; */
+}
+
+.lngth{
+    width: 17%;
+    margin-right: 3%;
+}
+
+.lngth2{
+    width: 20%;
+    margin-right: 10px;
+}
+
+.lngth3{
+    padding: 5px;
+    width: fit-content;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.bx{
+    border: 2px solid green;
+    border-radius: 15px;
+    
+}
